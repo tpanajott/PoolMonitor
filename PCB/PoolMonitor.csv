@@ -1,0 +1,34 @@
+"Source:","/home/tim/Projects/KiCad/PoolMonitor/PoolMonitor/PoolMonitor.sch"
+"Date:","Fri Jan  7 14:15:07 2022"
+"Tool:","Eeschema 6.0.0"
+"Generator:","/usr/share/kicad/plugins/bom_csv_grouped_by_value.py"
+"Component Count:","19"
+
+"Individual Components:"
+
+"Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet","LCSC","MANUFACTURER","MAXIMUM_PACKAGE_HEIGHT","PARTREV","STANDARD"
+"","","C1","10uF","Device:CP_Small","Capacitor_THT:CP_Radial_D5.0mm_P2.00mm","","C190963","","","",""
+"","","C2","22uF","Device:CP_Small","Capacitor_THT:CP_Radial_D5.0mm_P2.00mm","","C89789","","","",""
+"","","C4","1uf","Device:CP_Small","Capacitor_SMD:C_1206_3216Metric","","C397311","","","",""
+"","","J1","Conn_01x02_Male","Connector:Conn_01x02_Male","Connector_Molex:Molex_SPOX_5267-02A_1x02_P2.50mm_Vertical","~","C293435","","","",""
+"","","J2","Conn_01x06_Female","Connector:Conn_01x06_Female","Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical","~","C225503","","","",""
+"","","J3","Conn_01x02_Male","Connector:Conn_01x02_Male","Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical","~","","","","",""
+"","","J4","Conn_01x02_Male","Connector:Conn_01x02_Male","Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical","~","","","","",""
+"","","PS1","K7803M-1000R3","PoolMonitor-rescue:K7803M-1000R3-K7803M-1000R3","CONV_K7803M-1000R3","","","Mornsun","10.9 mm","2020.01.08-A/5","Manufacturer Recommendations"
+"","","Q1","DMP2225L-7 ","Device:Q_PMOS_DGS","Package_TO_SOT_SMD:SOT-23","https://datasheet.lcsc.com/lcsc/1809081625_Diodes-Incorporated-DMP2225L-7_C110501.pdf","C110501","","","",""
+"","","Q2","AO3400A","Transistor_FET:AO3400A","Package_TO_SOT_SMD:SOT-23","http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf","C344010","","","",""
+"","","R1","10K","Device:R_Small","Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder","~","C118075","","","",""
+"","","R5","10k","Device:R_Small","Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder","~","C118075","","","",""
+"","","R6","4k7","Device:R_Small","Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder","~","C242482","","","",""
+"","","R7","10K","Device:R_Small","Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder","~","C118075","","","",""
+"","","R8","10K","Device:R_Small","Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder","~","C118075","","","",""
+"","","SW_FLASH1","SW_Push","Switch:SW_Push","Button_Switch_SMD:SW_Push_SPST_NO_Alps_SKRK","~","C115357","","","",""
+"","","SW_RESET1","SW_Push","Switch:SW_Push","Button_Switch_SMD:SW_Push_SPST_NO_Alps_SKRK","~","C115357","","","",""
+"","","TempSense1","Conn_01x03_Male","Connector:Conn_01x03_Male","Connector_Molex:Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical","~","C293315","","","",""
+"","","U2","ESP-12E","RF_Module:ESP-12E","RF_Module:ESP-12E","http://wiki.ai-thinker.com/_media/esp8266/esp8266_series_modules_user_manual_v1.1.pdf","C89297","","","",""
+
+
+
+"Collated Components:"
+
+"Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet","LCSC","MANUFACTURER","MAXIMUM_PACKAGE_HEIGHT","PARTREV","STANDARD"

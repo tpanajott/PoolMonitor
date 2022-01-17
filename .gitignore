@@ -1,0 +1,6 @@
+.pio
+.vscode
+PCB/PoolMonitor-backups
+PCB/PoolMonitor.kicad_pcb-bak
+PCB/PoolMonitor.sch-bak
+src/settings.h
