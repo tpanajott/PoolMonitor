@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="E">
   <design>
-    <source>/home/tim/Projects/KiCad/PoolMonitor/PoolMonitor/PoolMonitor.sch</source>
-    <date>Fri Jan  7 14:15:07 2022</date>
+    <source>/home/tim/Projects/Arduino/PlatformIO/Projects/PoolTemp/PCB/PoolMonitor.kicad_sch</source>
+    <date>Tue Jan 18 00:12:15 2022</date>
     <tool>Eeschema 6.0.0</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -10,7 +10,7 @@
         <company/>
         <rev>2</rev>
         <date/>
-        <source>PoolMonitor.sch</source>
+        <source>PoolMonitor.kicad_sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
         <comment number="3" value=""/>
@@ -33,7 +33,7 @@
       <libsource lib="Device" part="CP_Small" description=""/>
       <property name="LCSC" value="C190963"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="/home/tim/Projects/KiCad/PoolMonitor/PoolMonitor/PoolMonitor.sch"/>
+      <property name="Sheetfile" value="PoolMonitor.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00006149b445</tstamps>
     </comp>
@@ -46,7 +46,7 @@
       <libsource lib="Device" part="CP_Small" description=""/>
       <property name="LCSC" value="C89789"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="/home/tim/Projects/KiCad/PoolMonitor/PoolMonitor/PoolMonitor.sch"/>
+      <property name="Sheetfile" value="PoolMonitor.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00006149d804</tstamps>
     </comp>
@@ -59,7 +59,7 @@
       <libsource lib="Device" part="CP_Small" description=""/>
       <property name="LCSC" value="C397311"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="/home/tim/Projects/KiCad/PoolMonitor/PoolMonitor/PoolMonitor.sch"/>
+      <property name="Sheetfile" value="PoolMonitor.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00006149745a</tstamps>
     </comp>
@@ -72,7 +72,7 @@
       <libsource lib="Connector" part="Conn_01x02_Male" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="LCSC" value="C293435"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="/home/tim/Projects/KiCad/PoolMonitor/PoolMonitor/PoolMonitor.sch"/>
+      <property name="Sheetfile" value="PoolMonitor.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000060cf1665</tstamps>
     </comp>
@@ -85,7 +85,7 @@
       <libsource lib="Connector" part="Conn_01x06_Female" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="LCSC" value="C225503"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="/home/tim/Projects/KiCad/PoolMonitor/PoolMonitor/PoolMonitor.sch"/>
+      <property name="Sheetfile" value="PoolMonitor.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000060c579d4</tstamps>
     </comp>
@@ -94,7 +94,7 @@
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
       <libsource lib="Connector" part="Conn_01x02_Male" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="/home/tim/Projects/KiCad/PoolMonitor/PoolMonitor/PoolMonitor.sch"/>
+      <property name="Sheetfile" value="PoolMonitor.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-0000617ffd45</tstamps>
     </comp>
@@ -103,7 +103,7 @@
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
       <libsource lib="Connector" part="Conn_01x02_Male" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="/home/tim/Projects/KiCad/PoolMonitor/PoolMonitor/PoolMonitor.sch"/>
+      <property name="Sheetfile" value="PoolMonitor.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-0000617e82e7</tstamps>
     </comp>
@@ -122,7 +122,7 @@
       <property name="PARTREV" value="2020.01.08-A/5"/>
       <property name="MANUFACTURER" value="Mornsun"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="/home/tim/Projects/KiCad/PoolMonitor/PoolMonitor/PoolMonitor.sch"/>
+      <property name="Sheetfile" value="PoolMonitor.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000061496aa2</tstamps>
     </comp>
@@ -136,7 +136,7 @@
       <libsource lib="Device" part="Q_PMOS_DGS" description="P-MOSFET transistor, drain/gate/source"/>
       <property name="LCSC" value="C110501"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="/home/tim/Projects/KiCad/PoolMonitor/PoolMonitor/PoolMonitor.sch"/>
+      <property name="Sheetfile" value="PoolMonitor.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000060cfb040</tstamps>
     </comp>
@@ -150,7 +150,7 @@
       <libsource lib="Transistor_FET" part="AO3400A" description="30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23"/>
       <property name="LCSC" value="C344010"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="/home/tim/Projects/KiCad/PoolMonitor/PoolMonitor/PoolMonitor.sch"/>
+      <property name="Sheetfile" value="PoolMonitor.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-0000614b9bd5</tstamps>
     </comp>
@@ -163,7 +163,7 @@
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <property name="LCSC" value="C118075"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="/home/tim/Projects/KiCad/PoolMonitor/PoolMonitor/PoolMonitor.sch"/>
+      <property name="Sheetfile" value="PoolMonitor.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000060edcfcc</tstamps>
     </comp>
@@ -176,7 +176,7 @@
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <property name="LCSC" value="C118075"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="/home/tim/Projects/KiCad/PoolMonitor/PoolMonitor/PoolMonitor.sch"/>
+      <property name="Sheetfile" value="PoolMonitor.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000060c2b5a7</tstamps>
     </comp>
@@ -189,7 +189,7 @@
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <property name="LCSC" value="C242482"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="/home/tim/Projects/KiCad/PoolMonitor/PoolMonitor/PoolMonitor.sch"/>
+      <property name="Sheetfile" value="PoolMonitor.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000060c135d7</tstamps>
     </comp>
@@ -202,7 +202,7 @@
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <property name="LCSC" value="C118075"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="/home/tim/Projects/KiCad/PoolMonitor/PoolMonitor/PoolMonitor.sch"/>
+      <property name="Sheetfile" value="PoolMonitor.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000060c4bf28</tstamps>
     </comp>
@@ -215,7 +215,7 @@
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <property name="LCSC" value="C118075"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="/home/tim/Projects/KiCad/PoolMonitor/PoolMonitor/PoolMonitor.sch"/>
+      <property name="Sheetfile" value="PoolMonitor.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000060c1a8d3</tstamps>
     </comp>
@@ -228,7 +228,7 @@
       <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
       <property name="LCSC" value="C115357"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="/home/tim/Projects/KiCad/PoolMonitor/PoolMonitor/PoolMonitor.sch"/>
+      <property name="Sheetfile" value="PoolMonitor.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000060c14eac</tstamps>
     </comp>
@@ -241,7 +241,7 @@
       <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
       <property name="LCSC" value="C115357"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="/home/tim/Projects/KiCad/PoolMonitor/PoolMonitor/PoolMonitor.sch"/>
+      <property name="Sheetfile" value="PoolMonitor.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000060c13c8c</tstamps>
     </comp>
@@ -254,7 +254,7 @@
       <libsource lib="Connector" part="Conn_01x03_Male" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="LCSC" value="C293315"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="/home/tim/Projects/KiCad/PoolMonitor/PoolMonitor/PoolMonitor.sch"/>
+      <property name="Sheetfile" value="PoolMonitor.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000060c07b2c</tstamps>
     </comp>
@@ -268,25 +268,12 @@
       <libsource lib="RF_Module" part="ESP-12E" description="802.11 b/g/n Wi-Fi Module"/>
       <property name="LCSC" value="C89297"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="/home/tim/Projects/KiCad/PoolMonitor/PoolMonitor/PoolMonitor.sch"/>
+      <property name="Sheetfile" value="PoolMonitor.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000060b2e57c</tstamps>
     </comp>
   </components>
   <libparts>
-    <libpart lib="" part="Device_CP_Small">
-      <footprints>
-        <fp>CP_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">C</field>
-        <field name="Value">Device_CP_Small</field>
-      </fields>
-      <pins>
-        <pin num="1" name="" type="passive"/>
-        <pin num="2" name="" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="Connector" part="Conn_01x02_Male">
       <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
       <docs>~</docs>
@@ -338,6 +325,19 @@
         <pin num="4" name="Pin_4" type="passive"/>
         <pin num="5" name="Pin_5" type="passive"/>
         <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="CP_Small">
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">Device_CP_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="Device" part="Q_PMOS_DGS">
@@ -463,7 +463,7 @@
       <uri>/usr/share/kicad/symbols//Device.kicad_sym</uri>
     </library>
     <library logical="PoolMonitor-rescue">
-      <uri>/home/tim/Projects/KiCad/PoolMonitor/PoolMonitor/PoolMonitor-rescue.lib</uri>
+      <uri>/home/tim/Projects/Arduino/PlatformIO/Projects/PoolTemp/PCB/PoolMonitor-rescue.lib</uri>
     </library>
     <library logical="RF_Module">
       <uri>/usr/share/kicad/symbols//RF_Module.kicad_sym</uri>
