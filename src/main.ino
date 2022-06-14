@@ -34,9 +34,9 @@ PubSubClient client(espClient);
 OneWire oneWire(D1);
 DallasTemperature temp_sensor(&oneWire);
 float current_temperature = 0;
+float current_voltage = 0;
 
 void setup() {
-  Serial.begin(9600);
   // Disable WiFi, coming from DeepSleep, as we do not need it right away
   WiFi.mode( WIFI_OFF );
   WiFi.forceSleepBegin();
@@ -54,6 +54,8 @@ void setup() {
   current_temperature = temp_sensor.getTempCByIndex(0);
   // Turn off power to the DS18B20 sensor
   digitalWrite(DS18B20_FET_PIN, LOW);
+
+  current_voltage = getPowerVoltage();
 
   // Try to read WiFi settings from RTC memory
   bool rtcValid = false;
@@ -138,12 +140,34 @@ void setup() {
   delay( 1 );
 
   // WAKE_RF_DISABLED to keep the WiFi radio disabled when we wake up
-  ESP.deepSleep(3600*1e6, WAKE_RF_DISABLED );
+  ESP.deepSleep(SLEEP_TIME, WAKE_RF_DISABLED );
 }
 
 
 void loop() {
   // Loop is never used. All magic is happening in setup, after setup is done the device will go to sleep
+}
+
+float getPowerVoltage() {
+  pinMode(POWER_READ_PIN, INPUT); // Set ADC to INPUT
+  pinMode(POWER_READ_CONTROL_PIN, OUTPUT); // Power flow control pin
+  digitalWrite(POWER_READ_CONTROL_PIN, LOW); // Write LOW to enable flow of electricity.
+  delay(10);
+  float voltage = analogRead(A0);
+  // Calculate actual voltage from ADC value
+  // 1024 = 1V.
+  // Resistor divider on PCB: 10K -> ADC -> 2K -> GND. This results in 6V = 1V on ADC.
+  // 6V / 1024 = 
+  voltage = voltage * 0.005859375;
+  // Compensate for reading to high
+  voltage = voltage * 0.913633160937;
+  // Round voltage to 2 digits
+  voltage = round(voltage * 100) / 100;
+  
+  digitalWrite(POWER_READ_CONTROL_PIN, HIGH); // Write HIGH to disable flow of electricity.
+  delay(50);
+  pinMode(POWER_READ_PIN, OUTPUT); // Set ADC to input to block current flow
+  return voltage;
 }
 
 void sendMQTTmessage()
@@ -152,6 +176,7 @@ void sendMQTTmessage()
     reconnect();
   }
   client.publish(MQTT_TEMP_TOPIC, String(current_temperature).c_str(), false);
+  client.publish(MQTT_VOLT_TOPIC, String(current_voltage).c_str(), false);
   delay(10);
   
   /* Close MQTT client cleanly */

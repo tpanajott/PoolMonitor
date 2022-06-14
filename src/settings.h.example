@@ -3,14 +3,14 @@
 #define WLAN_PASSWD "WiFi Password"
 
 // IP configuration. Pay attention! These are commas and not dots
-#define IP_ADDRESS 10, 0, 0, 7
+#define IP_ADDRESS 192, 168, 1, 10
 #define IP_SUBNET 255, 255, 255, 0
-#define IP_GATEWAY 10, 10, 0, 1
-#define IP_DNS 10, 0, 0, 1
+#define IP_GATEWAY 192, 168, 1, 1
+#define IP_DNS 192, 168, 1, 1
 
 // MQTT Settings
 #define MQTT_DEVICE_NAME "pool_sensor"
-#define MQTT_SERV_IP "10.0.0.2"
+#define MQTT_SERV_IP "192.168.1.2"
 #define MQTT_PORT 1883
 #define MQTT_TEMP_TOPIC "/pool/temp/"
 #define MQTT_USE_AUTH false  // Valid values are true or false (case sensetive)
@@ -23,3 +23,6 @@
 // Pin definitions. There should not be a need to change these if using the PCB in this repository
 #define DS18B20_FET_PIN 4
 #define DS18B20_PIN 5
+
+#define POWER_READ_CONTROL_PIN 12
+#define POWER_READ_PIN A0
