@@ -6,6 +6,7 @@
 <!-- code_chunk_output -->
 
 - [PoolMonitor](#poolmonitor)
+  - [Description](#description)
   - [Hardware](#hardware)
     - [PCB Manufacturing](#pcb-manufacturing)
     - [Parts](#parts)
@@ -18,6 +19,11 @@
 
 <!-- /code_chunk_output -->
 
+
+## Description
+This is a small PCB made to monitor the temperature of a pool using a DS18B20 waterproof sensor. The PCB is based around a ESP-12 module that will connect to WiFi periodically (period time configurable) and report the temperature together with battery voltage via MQTT. In between the meassurements, the sensors are turned off to save battery.
+
+![PCB Preview](PCB/PoolMonitor.jpg)
 
 ## Hardware
 ### PCB Manufacturing
@@ -65,5 +71,11 @@ The following configuration example can be added to the `sensor` section in your
   name: "Pool temperature"
   state_topic: "/pool/temp/"
   unit_of_measurement: "°C"
+  expire_after: 4200
+- platform: mqtt
+  device_class: temperature
+  name: "Pool sensor voltage"
+  state_topic: "/pool/voltage/"
+  unit_of_measurement: "V"
   expire_after: 4200
 ```

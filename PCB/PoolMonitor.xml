@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/home/tim/Projects/Arduino/PlatformIO/Projects/PoolTemp/PCB/PoolMonitor.kicad_sch</source>
-    <date>Tue Jun 14 22:45:33 2022</date>
+    <date>Tue Jun 14 23:03:22 2022</date>
     <tool>Eeschema (6.0.5)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -348,12 +348,12 @@
     </comp>
     <comp ref="TempSense1">
       <value>Conn_01x03_Male</value>
-      <footprint>Connector_Molex:Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical</footprint>
+      <footprint>Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical</footprint>
       <fields>
-        <field name="LCSC">C293315</field>
+        <field name="LCSC">C131339</field>
       </fields>
       <libsource lib="Connector" part="Conn_01x03_Male" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="LCSC" value="C293315"/>
+      <property name="LCSC" value="C131339"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PoolMonitor.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>

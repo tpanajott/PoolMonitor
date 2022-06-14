@@ -17,6 +17,6 @@ Comment,Designator,Footprint,LCSC
 "1K","R4","Resistor_SMD:R_1206_3216Metric",""
 "10k","R5","Resistor_SMD:R_0603_1608Metric","C98220"
 "4k7","R6","Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder","C242482"
-"Conn_01x03_Male","TempSense1","Connector_Molex:Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical","C293315"
+"Conn_01x03_Male","TempSense1","Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical","C131339"
 "K7803M-1000R3","U1","CustomFootprints:CONV_K7803M-1000R3","C494983"
 "ESP-12E","U2","RF_Module:ESP-12E","C89297"
