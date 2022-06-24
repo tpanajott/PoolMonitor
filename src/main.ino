@@ -49,9 +49,8 @@ void setup() {
 
   // Get temperature while WiFi is off
   temp_sensor.begin();
-  temp_sensor.requestTemperatures();
-  delay(2);
-  current_temperature = temp_sensor.getTempCByIndex(0);
+  delay(10);
+  current_temperature = getCurrentTemperature();
   // Turn off power to the DS18B20 sensor
   digitalWrite(DS18B20_FET_PIN, LOW);
 
@@ -146,6 +145,24 @@ void setup() {
 
 void loop() {
   // Loop is never used. All magic is happening in setup, after setup is done the device will go to sleep
+}
+
+float getCurrentTemperature() {
+  float temp;
+  for(int i = 0; i < 3; i++) {
+    temp_sensor.requestTemperatures();
+    delay(10);
+    temp = temp_sensor.getTempCByIndex(0);
+
+    // If the temperature that was retrieved was below -100 (not reasonable) then try again
+    // else break. The default temperature when it fails to retreive a temperature is -127
+    if(temp > -100) {
+      return temp;
+    } else {
+      delay(50);
+    }
+  }
+  return temp;
 }
 
 float getPowerVoltage() {
