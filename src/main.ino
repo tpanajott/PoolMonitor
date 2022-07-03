@@ -42,18 +42,20 @@ void setup() {
   WiFi.forceSleepBegin();
   delay(1);
   
-  // Turn on power to the DS18B20 sensor
+  // Set pin modes
   pinMode(DS18B20_FET_PIN, OUTPUT);
-  digitalWrite(DS18B20_FET_PIN, HIGH);
-  delay(10);
+  pinMode(POWER_READ_PIN, INPUT); // Set ADC to INPUT
+  pinMode(POWER_READ_CONTROL_PIN, OUTPUT); // Power flow control pin
+  // Turn everything OFF as a default
+  digitalWrite(DS18B20_FET_PIN, LOW);
+  digitalWrite(POWER_READ_CONTROL_PIN, LOW);
+  delay(50);
 
   // Get temperature while WiFi is off
   temp_sensor.begin();
-  delay(10);
-  current_temperature = getCurrentTemperature();
-  // Turn off power to the DS18B20 sensor
-  digitalWrite(DS18B20_FET_PIN, LOW);
+  temp_sensor.setWaitForConversion(true); // Synchronious mode
 
+  current_temperature = getCurrentTemperature();
   current_voltage = getPowerVoltage();
 
   // Try to read WiFi settings from RTC memory
@@ -148,26 +150,36 @@ void loop() {
 }
 
 float getCurrentTemperature() {
+  // Try to reset DS18B20-sensor and do another search if not found. Max 10 attempts
+  for(int i = 0; i < 10 && temp_sensor.getDeviceCount() == 0; i++) {
+    // Power cycle DS18B20 sensor
+    digitalWrite(DS18B20_FET_PIN, LOW);
+    delay(500);
+    digitalWrite(DS18B20_FET_PIN, HIGH);
+    delay(500);
+    temp_sensor.begin();
+  }
+
   float temp;
-  for(int i = 0; i < 3; i++) {
+  // Try to get temperature. Max 10 attempts
+  for(int i = 0; i < 10 && temp_sensor.getDeviceCount() > 0; i++) {
     temp_sensor.requestTemperatures();
-    delay(10);
     temp = temp_sensor.getTempCByIndex(0);
 
     // If the temperature that was retrieved was below -100 (not reasonable) then try again
     // else break. The default temperature when it fails to retreive a temperature is -127
     if(temp > -100) {
-      return temp;
+      break;
     } else {
-      delay(50);
+      delay(500);
     }
   }
+  // Turn off power to the DS18B20 sensor when the reading is done
+  digitalWrite(DS18B20_FET_PIN, LOW);
   return temp;
 }
 
 float getPowerVoltage() {
-  pinMode(POWER_READ_PIN, INPUT); // Set ADC to INPUT
-  pinMode(POWER_READ_CONTROL_PIN, OUTPUT); // Power flow control pin
   digitalWrite(POWER_READ_CONTROL_PIN, LOW); // Write LOW to enable flow of electricity.
   delay(10);
   float voltage = analogRead(A0);
@@ -192,8 +204,13 @@ void sendMQTTmessage()
   if (!client.connected()) {
     reconnect();
   }
-  client.publish(MQTT_TEMP_TOPIC, String(current_temperature).c_str(), false);
-  client.publish(MQTT_VOLT_TOPIC, String(current_voltage).c_str(), false);
+  char current_temp[10];
+  char current_volt[10];
+  itoa(current_temperature, current_temp, 10);
+  itoa(current_voltage, current_volt, 10);
+
+  client.publish(MQTT_TEMP_TOPIC, current_temp, false);
+  client.publish(MQTT_VOLT_TOPIC, current_volt, false);
   delay(10);
   
   /* Close MQTT client cleanly */
